@@ -244,7 +244,7 @@ def task6():
 
         print(id)
         print(name)
-        print(name1) 
+        print(name1)    
 
         if id=="Submit":
             df1=feature_scaling.minmax_df(df)
@@ -298,5 +298,5 @@ def task7():
 def features():
     return render_template('features.html') 
 
-if __name__=="__main__":
-    app.run(debug=True)
+# if __name__=="__main__":
+#     app.run(debug=True)
