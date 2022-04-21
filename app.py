@@ -29,9 +29,9 @@ def task1():
 
         filename = secure_filename(cf.filename)
 
-        # basedir = os.path.abspath(os.path.dirname(__file__))
+        basedir = os.path.abspath(os.path.dirname(__file__))
         # print(basedir)
-        cf.save(os.path.join(app.config["CSV_upload"],filename))
+        cf.save(os.path.join(basedir,app.config["CSV_upload"],filename))
 
         global df
         df=pd.read_csv('static/CSV/'+filename)
