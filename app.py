@@ -22,7 +22,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/task1", methods= ["POST","GET"])
-def task1():
+def task1():    
     if request.method == "POST":
         
         cf=request.files['file']
