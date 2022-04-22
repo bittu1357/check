@@ -32,6 +32,7 @@ def task1():
         # basedir = os.path.abspath(os.path.dirname(__file__))
         # print(basedir)
         cf.save(os.path.join(app.config["CSV_upload"],filename))
+        print("File saved")
 
         global df
         df=pd.read_csv('static/CSV/'+filename)
