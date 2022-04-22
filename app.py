@@ -10,7 +10,7 @@ import feature_scaling
 app = Flask(__name__)
 
 
-app.config["CSV_upload"] = "E:/Info Objects/Project/Preprocessing/static/CSV"
+app.config["CSV_upload"] = "static/CSV"
 
 
 @app.route("/")
@@ -31,7 +31,7 @@ def task1():
 
         basedir = os.path.abspath(os.path.dirname(__file__))
         # print(basedir)
-        cf.save(os.path.join(basedir,app.config["CSV_upload"],filename))
+        cf.save(os.path.join(app.config["CSV_upload"],filename))
 
         global df
         df=pd.read_csv('static/CSV/'+filename)
